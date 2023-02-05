@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+const client = new ApolloClient({
+  uri: "https://sacred-flamingo-54.hasura.app/v1/graphql",
+  headers: {
+    "x-hasura-admin-secret":
+      "rktN5Jt0PoFdN57JmqBXhejWWzkCAasIkitCL6mptqvMaxjBA7AXqZTvUHH7x9WW",
+  },
+  cache: new InMemoryCache(),
+});
+//https://sacred-flamingo-54.hasura.app/v1/graphql
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </React.StrictMode>
 );
 
