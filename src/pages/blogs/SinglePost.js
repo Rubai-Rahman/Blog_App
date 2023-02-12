@@ -7,16 +7,25 @@ const SinglePost = () => {
 
   const { error, data, loading } = useId(id);
   if (error) return console.log(`${error.message}`);
-  if (loading) return <h3>Loading</h3>;
+  if (loading)
+    return (
+      <h2 className="font-extrabold text-teal-600 text-center  text-4xl     ">
+        Loading...{" "}
+      </h2>
+    );
   // if (data) return console.log(data?.blog_posts[0]?.content);
-if(data)
-  return (
-    <div>
-      <h2>{data?.blog_posts[0]?.title}</h2>
-      <h2>{data?.blog_posts[0]?.content}</h2>
-     
-    </div>
-  );
+  if (data)
+    return (
+      <div className="border-2 bg-stone-300 mx-24 h-full px-3 mt-9    ">
+        <h2 className="font-bold text-3xl text-teal-800 my-2  ">
+          {data?.blog_posts[0]?.category}
+        </h2>
+        <h2 className="text-3xl  ">{data?.blog_posts[0]?.title}</h2>
+        <h2 className=" h-40 w-6  text-clip overflow-hidden">
+          {data?.blog_posts[0]?.content}
+        </h2>
+      </div>
+    );
 };
 
 export default SinglePost;
