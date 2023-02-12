@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Post = ({ post }) => {
+const UserSinglePost = ({ post }) => {
   const { id, title, content, category, is_published, author_id } = post;
 
   return (
@@ -10,9 +10,11 @@ const Post = ({ post }) => {
       <h3>{title}</h3>
       <p className="text-ellipsis overflow-hidden">{content}</p>
       <span>{author_id}</span>
-      <Link className=" pl-7 text-cyan-700 " to={`/${id}`}>read...</Link>
+      <Link className=" pl-7 text-cyan-700 " to={`/${id}`}>
+        read...
+      </Link>
     </div>
   );
 };
 
-export default Post;
+export default UserSinglePost;
