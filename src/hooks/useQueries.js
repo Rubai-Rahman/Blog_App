@@ -41,7 +41,7 @@ export const useUser = (author_id) => {
 };
 //Get Post by Id
 export const GET_POSTS_BY_Id = gql`
-  query Get_Post_By_User($id: INT!) {
+  query Get_Post_By_User($id: Int!) {
     blog_posts(where: { id: { _eq: $id } }) {
      
       title
@@ -52,7 +52,7 @@ export const GET_POSTS_BY_Id = gql`
   }
 `;
 export const useId = (id) => {
-  const { data, error, loading } = useQuery(GET_POSTS_BY_USER, {
+  const { data, error, loading } = useQuery(GET_POSTS_BY_Id, {
     variables: {
       id,
     },

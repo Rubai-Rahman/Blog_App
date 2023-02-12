@@ -1,6 +1,7 @@
 import { NhostClient, NhostProvider } from "@nhost/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreatePost from "./pages/blogs/CreatePost";
+import SinglePost from "./pages/blogs/SinglePost";
 import UserPosts from "./pages/blogs/UserPosts";
 import Home from "./pages/Home/Home";
 import Navbar from "./pages/Navbar/Navbar";
@@ -24,6 +25,7 @@ function App() {
           {/* <Route path="userPost" element={<UserPost />} /> */}
           {/* <Route path="createPost" element={<CreatePost />} /> */}
           <Route path="sign-in" element={<SignIn />} />
+          <Route path="/:id" element={<SinglePost />} />
           <Route path="/" element={<Home />} />
           <Route
             path="/createPost"

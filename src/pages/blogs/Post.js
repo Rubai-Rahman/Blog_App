@@ -12,7 +12,7 @@ const Post = ({ post }) => {
       <p>{content}</p>
       <span>{is_published}</span>
       <span>{author_id}</span>
-      <Link to="" >read</Link>
+      <Link to={`/${id}`} >read</Link>
     </div>
   );
 };
