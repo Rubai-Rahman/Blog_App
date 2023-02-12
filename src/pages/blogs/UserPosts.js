@@ -20,7 +20,7 @@ const UserPosts = () => {
  
     return (
       <div>
-        <div className="grid grid-cols-4 gap-4 px-8 bg-slate-400  ">
+        <div className="grid grid-cols-4 gap-4 px-8 bg-teal-400   ">
           {data?.blog_posts.map((post) => (
               <UserSinglePost key={post.id} post={post} />
             ))}

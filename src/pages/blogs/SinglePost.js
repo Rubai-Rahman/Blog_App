@@ -21,7 +21,7 @@ const SinglePost = () => {
           {data?.blog_posts[0]?.category}
         </h2>
         <h2 className="text-3xl  ">{data?.blog_posts[0]?.title}</h2>
-        <h2 className=" h-40 w-6  text-clip overflow-hidden">
+        <h2 className=" h-40 mt-2  text-ellipsis break-words  ">
           {data?.blog_posts[0]?.content}
         </h2>
       </div>

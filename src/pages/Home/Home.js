@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <div className=" bg-teal-300 w-full h-96  ">
         <input
-          onBlur={(e) => setSearch(e.target.value)}
+          onChange={(e) => setSearch(e.target.value)}
           className=" justify-center mt-36 ml-60  w-96 h-12 outline-none pl-2     "
           type="text"
           placeholder=" Search "

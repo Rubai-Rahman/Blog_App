@@ -16,7 +16,10 @@ console.log(search)
     return (
       <div className="grid grid-cols-4 gap-4 px-8 bg-slate-400  ">
         {data?.blog_posts?.filter((post) => {
-          return search.toLowerCase()===""?post:post.title.toLowerCase().includes(search)
+          return search.toLowerCase() === ""
+            ? post
+            : post.title.toLowerCase().includes(search) ||
+                post.content.toLowerCase().includes(search);
         }).map((post) => (
           <Post key={post.id} post={post} />
         ))}
