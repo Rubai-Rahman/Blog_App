@@ -5,14 +5,14 @@ const Post = ({ post }) => {
   const { id, title, content, category, is_published, author_id } = post;
 
   return (
-    <div>
+    <div className="shadow-2xl shadow-black rounded-md text-center   ">
       <h1>{id}</h1>
       <h3>{title}</h3>
       <h4>{category}</h4>
-      <p>{content}</p>
+      <p className="text-ellipsis overflow-hidden">{content}</p>
       <span>{is_published}</span>
       <span>{author_id}</span>
-      <Link to={`/${id}`} >read</Link>
+      <Link to={`/${id}`}>read</Link>
     </div>
   );
 };
