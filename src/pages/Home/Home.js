@@ -1,16 +1,25 @@
-import { useUserData } from '@nhost/react';
-import React from 'react';
-import Posts from '../blogs/Posts';
-
+import { useUserData } from "@nhost/react";
+import React, { useState } from "react";
+import Posts from "../blogs/Posts";
 
 const Home = () => {
-  const user = useUserData();
-
-
+  const [search, setSearch] = useState("");
+  
   return (
     <div>
-      <h1>This is Home</h1>
-      <Posts/>
+      <div className=" bg-teal-300 w-full h-96  ">
+        <input
+          onBlur={(e) => setSearch(e.target.value)}
+          className=" justify-center mt-36 ml-60  w-96 h-12 outline-none pl-2     "
+          type="text"
+          placeholder=" Search "
+        />
+        <button className=" m-5 ring-2 ring-teal-800 rounded-md w-40 h-12 text-2xl font-serif text-center  ">
+          {" "}
+          search
+        </button>
+      </div>
+      <Posts search={search} />
     </div>
   );
 };
