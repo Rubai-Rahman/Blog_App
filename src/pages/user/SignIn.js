@@ -30,20 +30,11 @@ const SignIn = () => {
   return (
     <div >
       <div >
-        <div >
-          <img alt="logo" />
-        </div>
 
-        {needsEmailVerification ? (
-          <p >
-            Please check your mailbox and follow the verification link to verify
-            your email.
-          </p>
-        ) : (
           <form onSubmit={handleOnSubmit} >
             <input
               type="email"
-              label="Email address"
+              placeholder="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={disableForm}
@@ -51,7 +42,7 @@ const SignIn = () => {
             />
             <input
               type="password"
-              label="Password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               disabled={disableForm}
@@ -70,7 +61,7 @@ const SignIn = () => {
               <p >{error?.message}</p>
             ) : null}
           </form>
-        )}
+        
       </div>
 
       <p >

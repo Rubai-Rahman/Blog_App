@@ -39,27 +39,18 @@ const SignUp = () => {
   return (
     <div >
       <div >
-        <div >
-          <img  alt="logo" />
-        </div>
-
-        {needsEmailVerification ? (
-          <p >
-            Please check your mailbox and follow the verification link to verify
-            your email.
-          </p>
-        ) : (
+       
           <form onSubmit={handleOnSubmit} >
             <div >
               <input
-                label="First name"
+               placeholder="firstName"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 disabled={disableForm}
                 required
               />
               <input
-                label="Last name"
+              placeholder="lastName"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 disabled={disableForm}
@@ -68,7 +59,7 @@ const SignUp = () => {
             </div>
             <input
               type="email"
-              label="Email address"
+              placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={disableForm}
@@ -76,7 +67,7 @@ const SignUp = () => {
             />
             <input
               type="password"
-              label="Create password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               disabled={disableForm}
@@ -95,7 +86,7 @@ const SignUp = () => {
               <p >{error?.message}</p>
             ) : null}
           </form>
-        )}
+        
       </div>
 
       <p >

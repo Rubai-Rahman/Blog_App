@@ -1,7 +1,7 @@
 import { NhostClient, NhostProvider } from "@nhost/react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreatePost from "./pages/blogs/CreatePost";
-import UserPost from "./pages/blogs/UserPost";
+import UserPosts from "./pages/blogs/UserPosts";
 import Home from "./pages/Home/Home";
 import Navbar from "./pages/Navbar/Navbar";
 import ProtectedRoute from "./pages/ProtectedRoute/ProtectedRoute";
@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="sign-up" element={<SignUp />} />
           <Route path="sign-in" element={<SignIn />} />
-          <Route path="userPost" element={<UserPost />} />
+          {/* <Route path="userPost" element={<UserPost />} /> */}
           {/* <Route path="createPost" element={<CreatePost />} /> */}
           <Route path="sign-in" element={<SignIn />} />
           <Route path="/" element={<Home />} />
@@ -30,11 +30,17 @@ function App() {
             element={
               <ProtectedRoute>
                 <CreatePost />
-                
               </ProtectedRoute>
             }
-          >
-          </Route>
+          ></Route>
+          <Route
+            path="/userPost"
+            element={
+              <ProtectedRoute>
+                <UserPosts />
+              </ProtectedRoute>
+            }
+          ></Route>
         </Routes>
       </BrowserRouter>
     </NhostProvider>
