@@ -13,7 +13,6 @@ const nhost = new NhostClient({
   subdomain: process.env.REACT_APP_NHOST_SUBDOMAIN,
   region: process.env.REACT_APP_NHOST_REGION,
 });
-
 function App() {
   return (
     <NhostProvider nhost={nhost}>
@@ -22,8 +21,7 @@ function App() {
         <Routes>
           <Route path="sign-up" element={<SignUp />} />
           <Route path="sign-in" element={<SignIn />} />
-          {/* <Route path="userPost" element={<UserPost />} /> */}
-          {/* <Route path="createPost" element={<CreatePost />} /> */}
+
           <Route path="sign-in" element={<SignIn />} />
           <Route path="/:id" element={<SinglePost />} />
           <Route path="/" element={<Home />} />

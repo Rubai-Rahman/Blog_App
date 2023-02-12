@@ -16,9 +16,19 @@ const Navbar = () => {
         <Link to="/createPost">Create A Post</Link>
 
         {isAuthenticated ? (
-          <Link onClick={signOut}>Logout</Link>
+          <Link
+            className="outline outline-offset-4 rounded-sm outline-teal-300 bg-transparent   "
+            onClick={signOut}
+          >
+            Logout
+          </Link>
         ) : (
-          <Link to="/sign-in">Login</Link>
+          <Link
+            className="outline outline-offset-4 rounded-sm outline-teal-300 bg-transparent   "
+            to="/sign-in"
+          >
+            Login
+          </Link>
         )}
       </div>
     </div>
