@@ -8,7 +8,7 @@ const CreatePost = () => {
   const user = useUserData();
 
   author_idInput = user.displayName;
-  console.log(titleInput, contentInput, categoryInput, author_idInput);
+
   const [insertPost] = useMutation(INSERT_BLOG_POST);
 
   return (
@@ -59,12 +59,17 @@ const CreatePost = () => {
           <div>
             <textarea
               required
-               className="w-full h-60     "
+              className="w-full h-60     "
               placeholder="Write your post here..."
               ref={(i) => (contentInput = i)}
             ></textarea>
-                
-            <button className="mb-32 outline outline-teal-300 w-36 rounded-sm shadow-sm h-8 text-xl outline-offset-2 bg-teal-700 mt-2   " type="submit">Submit</button>
+
+            <button
+              className="mb-32 outline outline-teal-300 w-36 rounded-sm shadow-sm h-8 text-xl outline-offset-2 bg-teal-700 mt-2   "
+              type="submit"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </form>

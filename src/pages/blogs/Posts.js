@@ -14,7 +14,7 @@ console.log(search)
   );
   if (data)
     return (
-      <div className="grid grid-cols-4 gap-4 px-8 bg-teal-800  ">
+      <div className="grid grid-cols-4 gap-4 px-8 bg-teal-800 pb-20  ">
         {data?.blog_posts?.filter((post) => {
           return search.toLowerCase() === ""
             ? post
