@@ -17,15 +17,13 @@ const UserPosts = () => {
       </h2>
     );
   if (data)
- 
     return (
       <div>
         <div className="grid grid-cols-4 gap-4 px-8 bg-teal-400  pb-14  ">
           {data?.blog_posts.map((post) => (
-              <UserSinglePost key={post.id} post={post} />
-            ))}
+            <UserSinglePost key={post.id} post={post} />
+          ))}
         </div>
-        <h3>why not </h3>
       </div>
     );
 };

@@ -6,7 +6,7 @@ const SinglePost = () => {
   const { id } = useParams();
 
   const { error, data, loading } = useId(id);
-  if (error) return console.log(`${error.message}`);
+  if (error) return <p>{`${error.message}`}</p>;
   if (loading)
     return (
       <h2 className="font-extrabold text-teal-600 text-center  text-4xl     ">

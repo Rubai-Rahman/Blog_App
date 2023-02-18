@@ -5,7 +5,7 @@ import Post from "./Post";
 
 const Posts = ({search}) => {
   const { error, data, loading } = useQuery(GET_POSTS);
-console.log(search)
+
   if (error) return `${error.message}`;
   if (loading) return (
     <h2 className="font-extrabold text-teal-600 text-center  text-4xl     ">
