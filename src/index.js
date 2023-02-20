@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const client = new ApolloClient({
-  uri: process.env.REACT_APP_HASURA_URI,
+  uri: "https://sacred-flamingo-54.hasura.app/v1/graphql",
   headers: {
     "x-hasura-admin-secret":
       "rktN5Jt0PoFdN57JmqBXhejWWzkCAasIkitCL6mptqvMaxjBA7AXqZTvUHH7x9WW",
