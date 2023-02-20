@@ -10,8 +10,8 @@ import SignIn from "./pages/user/SignIn";
 import SignUp from "./pages/user/SignUp";
 
 const nhost = new NhostClient({
-  subdomain: "ixrdjzgyrnfswatirnhv",
-  region: "ap-south-1",
+  subdomain: process.env.REACT_APP_NHOST_SUBDOMAIN,
+  region: process.env.REACT_APP_REGION,
 });
 function App() {
   return (

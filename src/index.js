@@ -5,14 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 const client = new ApolloClient({
-  uri: "https://sacred-flamingo-54.hasura.app/v1/graphql",
+  uri: process.env.REACT_APP_HASURA_URI,
   headers: {
     "x-hasura-admin-secret":
       "rktN5Jt0PoFdN57JmqBXhejWWzkCAasIkitCL6mptqvMaxjBA7AXqZTvUHH7x9WW",
   },
   cache: new InMemoryCache(),
 });
-//https://sacred-flamingo-54.hasura.app/v1/graphql
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
