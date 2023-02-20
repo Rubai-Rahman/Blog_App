@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const UserSinglePost = ({ post }) => {
-  const { id, title, content, category, is_published, author_id } = post;
+  const { id, title, content, category, author_id } = post;
 
   return (
     <div className="shadow-2xl shadow-black rounded-md text-center bg-zinc-100   mt-9 p-12  ">

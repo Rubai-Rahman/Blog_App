@@ -1,6 +1,5 @@
 import { useUserData } from "@nhost/react";
 import React from "react";
-import { Link } from "react-router-dom";
 import { useUser } from "../../hooks/useQueries";
 import UserSinglePost from "./UserSinglePost";
 

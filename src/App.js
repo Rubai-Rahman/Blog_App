@@ -11,7 +11,7 @@ import SignUp from "./pages/user/SignUp";
 
 const nhost = new NhostClient({
   subdomain: process.env.REACT_APP_NHOST_SUBDOMAIN,
-  region: process.env.REACT_APP_REGION,
+  region: process.env.REACT_APP_NHOST_REGION,
 });
 function App() {
   return (
